@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+    <script src="script.js"></script>
+    <style>
+        .left-table {
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 400px;
+            border-spacing: 30px;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+
+        }
+
+        #right-table {
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 562px;
+            border-spacing: 15px;
+            margin-top: 70px;
+            margin-right: 49px;
+            background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+
+        }
+
+
+        td {
+            height: 40px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #savebtn {
+            width: 30%;
+            height: 33px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: green;
+            font-weight: bold;
+        }
+
+        #course {
+            width: 71%;
+            height: 58%;
+        }
+
+        input {
+            border: none;
+            border-bottom: 2px solid gray;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-table,
+        .container-box {
+            flex: 1;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 55px;
+        }
+
+        .delbtn {
+            color: white;
+            background-color: red;
+            width: 70px;
+            height: 23px;
+            border-radius: 10px;
+            border: none;
+        }
+
+
+        th {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+            color: white;
+            /* White text */
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container-table">
+            <h1>Student form</h1>
+            <table class="left-table">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="name"> </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" id="age"> </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><label>
+                            <input type="radio" name="gender" value="male" /> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" /> Female
+                        </label>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td><select id="course" name="course">
+                            <option value="JAVASCRIPT">JAVASCRIPT</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="REACTJS">REACTJS</option>
+                        </select> </td>
+                </tr>
+                <tr>
+                    <td>E Mail</td>
+                    <td><input type="email" id="email" placeholder="Enter your e-mail id">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2"><button id="savebtn" onclick="getvalues()">Save</button></td>
+
+                </tr>
+
+
+            </table>
+
+        </div>
+        <div class="container-box">
+            <table id="right-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>E-mail</th>
+                    <th>Button</th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
